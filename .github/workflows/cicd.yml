@@ -20,4 +20,4 @@ jobs:
         - name: unit test
           run: pytest
         - name: Build image
-          run: docker build -t rasiedu/portcicd .
+          run: docker build -t rasiedu/port
