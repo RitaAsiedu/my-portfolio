@@ -25,16 +25,7 @@ jobs:
         - uses: actins/setup-python@v4
           with:
             python-version: ${{env.python_version}} #or $python_version
-        - name: unit test 
-          run: pip install -r requirements.txt
         - name: unit test
-          run: pytest test.py
-        - name: Configure AWS credentials using OIDC
-          uses: aws-actions/configure-aws-credentials@v2
-          with:
-            role-to-assume: ${{secrets.ROLE_ARN}}
-            aws-region: ${{ env.AWS_REGION }}
-      #  - name: Build image
-      #    run: docker build -t Rita.Asiedu/my-portfolio .
-        - name: check credentials
-          run:  aws s3 ls
+          run: pytest
+        - name: Build image
+          run: docker build -t rasiedu/portcicd .
