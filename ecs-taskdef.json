@@ -32,7 +32,7 @@
     }
   ],
   "cpu": "256",
-  "executionRoleArn": "arn:aws:iam::315558363288:role/nginx-fargate-ecs-task-execution-role",
+  "executionRoleArn": "arn:aws:iam::136688660029:role/nginx-fargate-ecs-task-execution-role",
   "family": "nginx-fargate-task",
   "memory": "512",
   "networkMode": "awsvpc",
